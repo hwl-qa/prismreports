@@ -1,0 +1,185 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Analytics Reports Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+    margin:0;
+    font-family: "Segoe UI", Roboto, Arial;
+    background:#f5f7fb;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    width:230px;
+    height:100vh;
+    background:#1f2937;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin-bottom:8px;
+    text-decoration:none;
+    color:#cbd5e1;
+    border-radius:6px;
+}
+
+.sidebar a:hover{
+    background:#374151;
+    color:white;
+}
+
+/* Main content */
+
+.main{
+    margin-left:250px;
+    padding:40px;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+/* Report grid */
+
+.section{
+    margin-bottom:40px;
+}
+
+.section-title{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#374151;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    text-decoration:none;
+    color:#111827;
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card-title{
+    font-size:16px;
+    font-weight:600;
+}
+
+.card-desc{
+    font-size:13px;
+    color:#6b7280;
+    margin-top:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📊 Reports</h2>
+
+<a href="#">Public Sources</a>
+<a href="#">Calculator Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Analytics Dashboard</h1>
+
+<!-- Public Sources -->
+
+<div class="section">
+<div class="section-title">Public Sources</div>
+
+<div class="grid">
+
+<a class="card" href="BLS_visual-report.html">
+<div class="card-title">BLS Visual Report</div>
+<div class="card-desc">Bureau of Labor Statistics data visualization</div>
+</a>
+
+<a class="card" href="CMSOMS_visual-report.html">
+<div class="card-title">CMS OMS Report</div>
+<div class="card-desc">CMS OMS visual analytics</div>
+</a>
+
+<a class="card" href="CMSOMS_Annual_visual-report.html">
+<div class="card-title">CMS OMS Annual</div>
+<div class="card-desc">Annual OMS statistics dashboard</div>
+</a>
+
+<a class="card" href="CMSHCRIS_visual-report.html">
+<div class="card-title">CMS HCRIS</div>
+<div class="card-desc">Healthcare cost report insights</div>
+</a>
+
+</div>
+</div>
+
+
+<!-- Calculator Reports -->
+
+<div class="section">
+<div class="section-title">Calculator Reports</div>
+
+<div class="grid">
+
+<a class="card" href="Hourly_BillRate_results.html">
+<div class="card-title">Hourly Bill Rate</div>
+<div class="card-desc">Bill rate calculations</div>
+</a>
+
+<a class="card" href="Hourly_Loaded_results.html">
+<div class="card-title">Hourly Loaded</div>
+<div class="card-desc">Loaded cost analytics</div>
+</a>
+
+<a class="card" href="results_BasePayRate.html">
+<div class="card-title">Base Pay Rate</div>
+<div class="card-desc">Daily cost modeling</div>
+</a>
+
+<a class="card" href="Weekly_results.html">
+<div class="card-title">Weekly Results</div>
+<div class="card-desc">Weekly rate projections</div>
+</a>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
+```

@@ -1,0 +1,337 @@
+
+  <html><head>
+  <title>HWL Test Report</title>
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    th { background: #f0f0f0; }
+    .pass { background: #d4edda; }
+    .fail { background: #f8d7da; }
+    .expected { background: #e7f5ff; }
+    .actual { background: #fff4e6; }
+  </style>
+  </head><body>
+  <h2>HWL Calculator Test Report_Hourly_Bill_Rate</h2>
+  <table>
+    <tr>
+      <th>Test Case</th>
+      <th>Input Data</th>
+      <th>M&I Total</th>
+      <th>M&I/hr</th>
+      <th>Row Type</th>
+      <th>hourlyBase</th>
+      <th>hourlyLoaded</th>
+      <th>weeklyPay</th>
+      <th>optimalBill</th>
+      <th>agencyRate</th>
+      <th>SUTA</th>
+      <th>Total Tax</th>
+      <th>Agency Markup</th>
+      <th>EOR Markup</th>
+      <th>VMS Fee</th>
+      <th>Status</th>
+    </tr>
+  
+  <tr class="expected pass">
+    <td>Run #1</td>
+    <td>
+Rate: 154.07<br>
+Weeks: 13<br>
+Hours: 36<br>
+Job: Accounts Payable Clerk<br>
+State: California<br>
+Location: Antioch
+</td>
+    <td>1631</td>
+    <td>45.31</td>
+    <td>EXPECTED</td>
+    <td>$65.01</td>
+    <td>$110.31</td>
+    <td>$3,971.22</td>
+    <td>$154.07/hr</td>
+    <td>$169.17/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="actual pass">
+    <td>Run #1</td>
+    <td>
+Rate: 154.07<br>
+Weeks: 13<br>
+Hours: 36<br>
+Job: Accounts Payable Clerk<br>
+State: California<br>
+Location: Antioch
+</td>
+     <td>1631</td>
+    <td>45.31</td>
+    <td>ACTUAL</td>
+    <td>$65.01</td>
+    <td>$110.31</td>
+    <td>$3,971.22</td>
+    <td>$154.07/hr</td>
+    <td>$169.17/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="expected pass">
+    <td>Run #2</td>
+    <td>
+Rate: 141.60<br>
+Weeks: 13<br>
+Hours: 40<br>
+Job: Accounts Payable Clerk<br>
+State: Alabama<br>
+Location: Birmingham (Jefferson)
+</td>
+    <td>1442</td>
+    <td>36.05</td>
+    <td>EXPECTED</td>
+    <td>$65.00</td>
+    <td>$101.05</td>
+    <td>$4,041.98</td>
+    <td>$141.60/hr</td>
+    <td>$155.48/hr</td>
+    <td>2.80%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="actual pass">
+    <td>Run #2</td>
+    <td>
+Rate: 141.60<br>
+Weeks: 13<br>
+Hours: 40<br>
+Job: Accounts Payable Clerk<br>
+State: Alabama<br>
+Location: Birmingham (Jefferson)
+</td>
+     <td>1442</td>
+    <td>36.05</td>
+    <td>ACTUAL</td>
+    <td>$65.00</td>
+    <td>$101.05</td>
+    <td>$4,041.98</td>
+    <td>$141.60/hr</td>
+    <td>$155.48/hr</td>
+    <td>2.80%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="expected fail">
+    <td>Run #3</td>
+    <td>
+Rate: 164.71<br>
+Weeks: 10<br>
+Hours: 36<br>
+Job: Activity Therapist<br>
+State: Arizona<br>
+Location: Phoenix
+</td>
+    <td>0</td>
+    <td>0</td>
+    <td>EXPECTED</td>
+    <td>$69.99</td>
+    <td>$117.83</td>
+    <td>$4,241.78</td>
+    <td>$164.71/hr</td>
+    <td>$180.86/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>FAIL</td>
+  </tr>
+  <tr class="actual fail">
+    <td>Run #3</td>
+    <td>
+Rate: 164.71<br>
+Weeks: 10<br>
+Hours: 36<br>
+Job: Activity Therapist<br>
+State: Arizona<br>
+Location: Phoenix
+</td>
+     <td>0</td>
+    <td>0</td>
+    <td>ACTUAL</td>
+    <td>ERROR</td>
+    <td>ERROR</td>
+    <td>ERROR</td>
+    <td>ERROR</td>
+    <td>ERROR</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>FAIL</td>
+  </tr>
+  <tr class="expected pass">
+    <td>Run #4</td>
+    <td>
+Rate: 144.43<br>
+Weeks: 10<br>
+Hours: 30<br>
+Job: Accountant<br>
+State: Texas<br>
+Location: Houston
+</td>
+    <td>1456</td>
+    <td>48.53</td>
+    <td>EXPECTED</td>
+    <td>$55.00</td>
+    <td>$103.53</td>
+    <td>$3,105.92</td>
+    <td>$144.43/hr</td>
+    <td>$158.59/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="actual pass">
+    <td>Run #4</td>
+    <td>
+Rate: 144.43<br>
+Weeks: 10<br>
+Hours: 30<br>
+Job: Accountant<br>
+State: Texas<br>
+Location: Houston
+</td>
+     <td>1456</td>
+    <td>48.53</td>
+    <td>ACTUAL</td>
+    <td>$55.00</td>
+    <td>$103.53</td>
+    <td>$3,105.92</td>
+    <td>$144.43/hr</td>
+    <td>$158.59/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="expected pass">
+    <td>Run #5</td>
+    <td>
+Rate: 189.09<br>
+Weeks: 15<br>
+Hours: 40<br>
+Job: Charge Nurse<br>
+State: Florida<br>
+Location: Miami
+</td>
+    <td>1810.67</td>
+    <td>45.27</td>
+    <td>EXPECTED</td>
+    <td>$90.00</td>
+    <td>$135.27</td>
+    <td>$5,410.79</td>
+    <td>$189.09/hr</td>
+    <td>$207.63/hr</td>
+    <td>3.40%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15.00%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="actual pass">
+    <td>Run #5</td>
+    <td>
+Rate: 189.09<br>
+Weeks: 15<br>
+Hours: 40<br>
+Job: Charge Nurse<br>
+State: Florida<br>
+Location: Miami
+</td>
+     <td>1810.67</td>
+    <td>45.27</td>
+    <td>ACTUAL</td>
+    <td>$90.00</td>
+    <td>$135.27</td>
+    <td>$5,410.79</td>
+    <td>$189.09/hr</td>
+    <td>$207.63/hr</td>
+    <td>3.40%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15.00%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="expected pass">
+    <td>Run #6</td>
+    <td>
+Rate: 240.08<br>
+Weeks: 26<br>
+Hours: 36<br>
+Job: Manager<br>
+State: California<br>
+Location: Sacramento
+</td>
+    <td>1652</td>
+    <td>45.89</td>
+    <td>EXPECTED</td>
+    <td>$124.41</td>
+    <td>$170.30</td>
+    <td>$6,130.71</td>
+    <td>$240.08/hr</td>
+    <td>$263.61/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15.00%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  <tr class="actual pass">
+    <td>Run #6</td>
+    <td>
+Rate: 240.08<br>
+Weeks: 26<br>
+Hours: 36<br>
+Job: Manager<br>
+State: California<br>
+Location: Sacramento
+</td>
+     <td>1652</td>
+    <td>45.89</td>
+    <td>ACTUAL</td>
+    <td>$124.41</td>
+    <td>$170.30</td>
+    <td>$6,130.71</td>
+    <td>$240.08/hr</td>
+    <td>$263.61/hr</td>
+    <td>2.70%</td>
+    <td>12.31%</td>
+    <td>23%</td>
+    <td>15.00%</td>
+    <td>6%</td>
+    <td>PASS</td>
+  </tr>
+  </table>
+  <h2>Overall Test Status: <span style="color:red">FAIL</span></h2>
+  </body></html>
